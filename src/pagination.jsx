@@ -17,7 +17,7 @@ const Pagination = ({limit, total, offset, setOffset}) =>{
 return(
     <ul className="pagination">
         <li>
-        <button onClick={() => OnpageChange(currentpage-10)} disabled={currentpage === 1}>&lt;&lt;</button>
+          <button onClick={() => OnpageChange(currentpage-10)} disabled={currentpage === 1}>&lt;&lt;</button>
         </li>
         {Array.from({length: Math.min(maxitem, pages)}).map((_, index)=> index + first)
         .map((page)=>(
@@ -26,7 +26,7 @@ return(
             {page}</button></li>
         ))}
         <li>
-        <button onClick={() => OnpageChange(currentpage+10)} disabled={currentpage === pages}>&gt;&gt;</button>
+          <button onClick={() => OnpageChange(currentpage+10)} disabled={currentpage === pages}>&gt;&gt;</button>
         </li>
     </ul>
 )
